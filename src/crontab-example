@@ -1,0 +1,8 @@
+# 
+# second minute hour day month
+0 * * * * date
+* * * * * date -u
+*/10 * * * * /bin/bash -c 'echo "************$(date -u)"'
+* * * * * date -d "1 day ago"
+@every 1h30 date -d "1 day ago"
+@daily date
